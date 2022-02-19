@@ -13,12 +13,15 @@ import { Farm } from './farm';
 export class MtSampleListIndexComponent {
   farms: Farm;
 
-  constructor(private farmsService: SelectedFarmService) {
+  constructor(
+    private farmsService: SelectedFarmService,
+    private dataService: DataService
+  ) {
     this.fetchData();
   }
 
   public fetchData() {
-    this.farmsService.getFarms().subscribe(
+    this.dataService.getFarms().subscribe(
       (res) => {
         this.farms = res;
       },
