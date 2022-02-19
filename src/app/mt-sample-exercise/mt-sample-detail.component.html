@@ -1,0 +1,20 @@
+<h5>Farm Selected</h5>
+
+<div class="row mt-2">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Farm No</th>
+        <th scope="col">Farm Name</th>
+        <th scope="col">Active Date</th>
+        <th scope="col">Address</th>
+      </tr>
+      <tr>
+        <td>{{ farm.FarmNo }}</td>
+        <td>{{ farm.FarmName }}</td>
+        <td>{{ farm.ActiveDate | date }}</td>
+        <td>{{ farm.Address }}</td>
+      </tr>
+    </thead>
+  </table>
+</div>
