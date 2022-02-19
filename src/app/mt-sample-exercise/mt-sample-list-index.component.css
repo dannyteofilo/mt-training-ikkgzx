@@ -1,3 +1,5 @@
 .farms-list:hover {
   cursor: pointer;
+  background-color: #eeeeee;
 }
+

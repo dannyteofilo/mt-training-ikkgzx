@@ -12,6 +12,7 @@ import { Farm } from './farm';
 })
 export class MtSampleListIndexComponent {
   farms: Farm;
+  error:string;
 
   constructor(
     private farmsService: SelectedFarmService,
@@ -51,5 +52,14 @@ export class MtSampleListIndexComponent {
       );
     });
     return filterFarms;
+  }
+
+  public handleError(){
+    this.dataService.getException().subscribe(res=>{
+      console.log(res);
+    },err=>{
+      console.error('Error: ',err)
+      this.error=err.message;      
+    })
   }
 }

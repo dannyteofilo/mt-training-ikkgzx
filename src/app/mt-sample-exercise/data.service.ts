@@ -13,4 +13,7 @@ export class DataService {
   public getFarms(): Observable<Farm> {
     return this.httpService.get<Farm>(this._jsonURL);
   }
+  public getException(): Observable<any> {
+    return this.httpService.get('');
+  }
 }
